@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Styled } from "theme-ui"
 
 const LandingIntro = () => {
   const data = useStaticQuery(graphql`
@@ -14,7 +15,7 @@ const LandingIntro = () => {
   const { description } = data.site.siteMetadata
   return (
     <div>
-      <h2>{description}</h2>
+      <Styled.h2>{description}</Styled.h2>
     </div>
   )
 }

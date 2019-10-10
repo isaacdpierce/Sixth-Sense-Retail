@@ -1,4 +1,5 @@
 export default {
+  breakpoints: ["40em", "52em", "64em"],
   space: [0, 1, 3, 7, 9, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: "Source Sans Pro",
@@ -16,20 +17,24 @@ export default {
     heading: 1.125,
   },
   colors: {
-    text: "#000",
-    background: "#fff",
-    primary: "#07c",
-    secondary: "#30c",
-    muted: "#f6f6f6",
-    modes: {
-      dark: {
-        text: "#fff",
-        background: "#111",
-        primary: "#93c",
-        secondary: "#a9c",
-        muted: "#1d1d1d",
-      },
-    },
+    text: "#fff",
+    background: "#111",
+    greyLight: "#999",
+    greyMedium: "666",
+    greyDark: "333",
+    primary: "#B87333",
+    primaryDark: "#6C3400",
+    secondary: "#3378B8",
+    muted: "#222",
+    // modes: {
+    //   dark: {
+    //     text: "#fff",
+    //     background: "#111",
+    //     primary: "#93c",
+    //     secondary: "#a9c",
+    //     muted: "#1d1d1d",
+    //   },
+    // },
   },
   styles: {
     root: {
@@ -43,8 +48,6 @@ export default {
       lineHeight: "heading",
       fontWeight: "heading",
       fontSize: 5,
-      mt: 4,
-      mb: 2,
     },
     h2: {
       color: "text",
@@ -89,6 +92,7 @@ export default {
     },
     a: {
       color: "primary",
+      textDecoration: "none",
     },
     pre: {
       fontFamily: "monospace",

@@ -1,83 +1,67 @@
 /** @jsx jsx */
 import React from "react"
-import { jsx } from "theme-ui"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { jsx, Styled } from "theme-ui"
+import { css } from "@emotion/core"
+import styled from "@emotion/styled"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import Image from "./headerBgImage"
 
-const ListLink = props => (
-  <li
-    sx={{
-      padding: 0,
-      margin: 0,
-    }}
-  >
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
+import NavLinkList from "./navLinkList"
 
-const Header = ({ siteTitle }) => {
-  const data = useStaticQuery(graphql`
-    query mainNavLinksQuery {
-      allMainNavLinksJson {
-        edges {
-          node {
-            id
-            link
-            path
-          }
-        }
-      }
-    }
-  `)
+const Header = styled.header`
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+`
 
+const HeaderBgImage = styled.figure`
+  grid-column: 1/ -1;
+  grid-row: 1/ -1;
+  opacity: 0.1;
+`
+
+const Logo = styled.div`
+  border: 1px solid peru;
+  grid-column: 2 / span 4;
+  grid-row: 2 / span 2;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+`
+
+export default ({ siteTitle }) => {
   return (
-    <header
-      sx={{
-        backgroundColor: `muted`,
-        marginBottom: 1,
-      }}
-    >
-      <div
-        style={{
-          display: `flex`,
-          justifyContent: `space-between`,
-          alignItems: `flex-end`,
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
+    <Header>
+      <Logo
+        sx={{
+          px: 6,
+          py: 4,
         }}
       >
-        <h1 style={{ margin: 0 }}>
-          <Link
+        <h1
+          sx={{
+            fontSize: 7,
+          }}
+        >
+          <Styled.a
+            as={Link}
             to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
+            sx={{
+              color: `text`,
             }}
           >
             {siteTitle}
-          </Link>
+          </Styled.a>
         </h1>
-        <ul
-          style={{
-            listStyle: `none`,
-            margin: 0,
-            width: "30%",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          {/*  Create menu links */}
-          {data.allMainNavLinksJson.edges.map(({ node }) => {
-            return (
-              <ListLink key={node.id} to={node.path}>
-                {node.link}
-              </ListLink>
-            )
-          })}
-        </ul>
-      </div>
-    </header>
+      </Logo>
+      <NavLinkList />
+      <HeaderBgImage>
+        <Image />
+      </HeaderBgImage>
+    </Header>
   )
 }
 
@@ -88,5 +72,3 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
-
-export default Header
