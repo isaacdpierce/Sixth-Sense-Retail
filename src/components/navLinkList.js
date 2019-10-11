@@ -3,7 +3,7 @@ import React from "react"
 import { jsx, Styled } from "theme-ui"
 import styled from "@emotion/styled"
 import NavLinkItem from "./navLinkItem"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import useNavLinkData from "../hooks/useNavLinkData"
 
 const NavList = styled.nav`
   grid-column: 6 / span 5;
@@ -16,21 +16,9 @@ const NavList = styled.nav`
     justify-content: space-between;
   }
 `
-
 export default () => {
-  const data = useStaticQuery(graphql`
-    query mainNavLinksQuery {
-      allMainNavLinksJson {
-        edges {
-          node {
-            id
-            link
-            path
-          }
-        }
-      }
-    }
-  `)
+  const { edges } = useNavLinkData()
+
   return (
     <NavList>
       <ul
@@ -39,8 +27,7 @@ export default () => {
           m: 0,
         }}
       >
-        {/*  Create menu links */}
-        {data.allMainNavLinksJson.edges.map(({ node }) => {
+        {edges.map(({ node }) => {
           return (
             <NavLinkItem key={node.id} to={node.path}>
               {node.link}

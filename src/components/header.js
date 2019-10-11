@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx, Styled } from "theme-ui"
-import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
+
 import Image from "./headerBgImage"
+import Logo from "./logo"
 
 import NavLinkList from "./navLinkList"
 
@@ -21,54 +20,17 @@ const HeaderBgImage = styled.figure`
   grid-column: 1/ -1;
   grid-row: 1/ -1;
   opacity: 0.1;
+  clip-path: polygon(0 0, 0 76%, 49% 100%, 100% 77%, 100% 0%);
 `
 
-const Logo = styled.div`
-  border: 1px solid peru;
-  grid-column: 2 / span 4;
-  grid-row: 2 / span 2;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-`
-
-export default ({ siteTitle }) => {
+export default () => {
   return (
     <Header>
-      <Logo
-        sx={{
-          px: 6,
-          py: 4,
-        }}
-      >
-        <h1
-          sx={{
-            fontSize: 7,
-          }}
-        >
-          <Styled.a
-            as={Link}
-            to="/"
-            sx={{
-              color: `text`,
-            }}
-          >
-            {siteTitle}
-          </Styled.a>
-        </h1>
-      </Logo>
+      <Logo />
       <NavLinkList />
       <HeaderBgImage>
         <Image />
       </HeaderBgImage>
     </Header>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }

@@ -1,28 +1,9 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import useBlogData from "../hooks/useBlogData"
 
 const PostList = () => {
-  const data = useStaticQuery(graphql`
-    query BlogListQuery {
-      allMdx {
-        edges {
-          node {
-            excerpt(pruneLength: 30)
-            id
-            frontmatter {
-              date(formatString: "MMMM DD YYYY")
-              title
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const { edges: posts } = data.allMdx
+  const { edges: posts } = useBlogData()
   return (
     <div>
       <h1>This is an MDX Blog</h1>

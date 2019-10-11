@@ -6,14 +6,14 @@ import { Link } from "gatsby"
 
 const ListItem = styled.li`
   text-transform: uppercase;
-  font-weight: bolder;
+  letter-spacing: 1px;
 `
 
 const navLinkItem = props => {
   return (
     <ListItem
       sx={{
-        fontFamily: "body",
+        fontFamily: "heading",
         fontSize: 3,
         p: 0,
         m: 0,

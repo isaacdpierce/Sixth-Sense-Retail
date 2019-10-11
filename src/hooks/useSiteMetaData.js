@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from "gatsby"
-export const useSiteMetadata = () => {
+export default () => {
   const { site } = useStaticQuery(
     graphql`
       query SiteMetaData {
@@ -10,7 +10,6 @@ export const useSiteMetadata = () => {
             author
             url
             headline
-            twitter
           }
         }
       }

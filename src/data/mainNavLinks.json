@@ -8,11 +8,15 @@
     "path": "/about"
   },
   {
-    "link": "Contact",
-    "path": "/contact"
-  },
-  {
     "link": "Blog",
     "path": "/blog"
+  },
+  {
+    "link": "Projects",
+    "path": "/projects"
+  },
+  {
+    "link": "Contact",
+    "path": "/contact"
   }
 ]

@@ -5,8 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `IP Starter Blog Theme`,
     description: `Inspiring the next phase of human connection and culture.`,
-    author: `Isaac Pierce`,
-    twitter: `@isaacdpierce`,
+    author: `@isaacdpierce`,
     headline: `Inspiring the next phase of human connection and culture.`,
     url: `www.isaacpierce.io`,
   },
@@ -64,6 +63,12 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-netlify-cms`,
     {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about/`, `/projects/*`, `/blog/*`, `/contact/`],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -75,14 +80,7 @@ module.exports = {
         icon: `src/images/ip-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Source Serif Pro", "Source Sans Pro"],
-        },
-      },
-    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

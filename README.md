@@ -19,11 +19,12 @@ Change the connection settings in static/admin/config.js
 
 ## Metadata
 
-Change titles and descritions in gatsby-config.js
+Change titles and descriptions in gatsby-config.js
 
 ## Typography and Styles
 
 Adjust typography/styles in gatsby-plugin-theme/index.js 
+Fonts are added via npm and entered in the gatsby-browser.js
 
 ## Global Styles
 

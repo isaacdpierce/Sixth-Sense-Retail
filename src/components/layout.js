@@ -34,20 +34,10 @@ const Footer = styled.footer`
 `
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <Wrapper sx={{ backgroundColor: "background" }}>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
         <Main>{children}</Main>
         <Footer>
           <p sx={{ color: "greyLight", mb: 0 }}>

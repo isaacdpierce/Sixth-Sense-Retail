@@ -4,7 +4,7 @@ export default {
   fonts: {
     body: "Source Sans Pro",
     heading: "Source Serif Pro",
-    monospace: "Fira Code, monospace",
+    monospace: "Fira Mono, monospace",
   },
   fontSizes: [12, 16, 18, 21, 24, 33, 48, 64, 96],
   fontWeights: {
@@ -22,8 +22,8 @@ export default {
     greyLight: "#999",
     greyMedium: "666",
     greyDark: "333",
-    primary: "#B87333",
-    primaryDark: "#6C3400",
+    primary: "#994500",
+    primaryDark: "##3c1b00",
     secondary: "#3378B8",
     muted: "#222",
     // modes: {
