@@ -36,7 +36,7 @@ const Footer = styled.footer`
 const Layout = ({ children }) => {
   return (
     <>
-      <Wrapper sx={{ backgroundColor: "background" }}>
+      <Wrapper sx={{ backgroundColor: "background", color: "text" }}>
         <Header />
         <Main>{children}</Main>
         <Footer>
