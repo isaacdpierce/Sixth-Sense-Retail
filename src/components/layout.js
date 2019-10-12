@@ -35,10 +35,7 @@ const Layout = ({ children }) => {
       <Footer>
         <p sx={{ color: "greyLight", mb: 0 }}>
           © {new Date().getFullYear()}, Built by &nbsp;{" "}
-          <Link
-            href="https://www.isaacpierce.io"
-            sx={{ fontFamily: "heading" }}
-          >
+          <Link to="https://www.isaacpierce.io" sx={{ fontFamily: "heading" }}>
             {" "}
             Isaac Pierce
           </Link>
