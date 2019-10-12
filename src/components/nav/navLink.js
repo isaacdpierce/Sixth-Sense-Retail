@@ -9,21 +9,22 @@ const ListItem = styled.li`
   letter-spacing: 1px;
 `
 
-const navLinkItem = props => {
+const StyledLink = styled(Link)``
+
+const navLink = props => {
   return (
     <ListItem
       sx={{
-        fontFamily: "heading",
         fontSize: 3,
         p: 0,
-        m: 0,
+        mr: 6,
       }}
     >
-      <Styled.a as={Link} to={props.to}>
+      <Link to={props.to} sx={{ fontFamily: "heading" }}>
         {props.children}
-      </Styled.a>
+      </Link>
     </ListItem>
   )
 }
 
-export default navLinkItem
+export default navLink

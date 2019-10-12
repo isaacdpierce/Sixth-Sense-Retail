@@ -3,7 +3,7 @@ const emoji = require(`remark-emoji`)
 
 module.exports = {
   siteMetadata: {
-    title: `IP Starter Blog Theme`,
+    title: `Pierce Agency`,
     description: `Inspiring the next phase of human connection and culture.`,
     author: `@isaacdpierce`,
     headline: `Inspiring the next phase of human connection and culture.`,
@@ -37,6 +37,12 @@ module.exports = {
         name: `data`,
         path: `${__dirname}/src/data/`,
         ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
       },
     },
     {

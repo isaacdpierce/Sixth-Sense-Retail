@@ -1,13 +1,19 @@
+/** @jsx jsx */
 import React from "react"
+import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-export default () => (
-  <Layout>
-    <SEO title="Contact" />
-    <h1>Hi from the contact page</h1>
-    <p>contact us!</p>
-  </Layout>
-)
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Main from "../components/main/main"
+
+export default () => {
+  return (
+    <Layout>
+      <SEO title="Contact" />
+      <Main>
+        <Styled.h1>Contact Us!</Styled.h1>
+      </Main>
+    </Layout>
+  )
+}

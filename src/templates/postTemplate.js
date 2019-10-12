@@ -1,19 +1,18 @@
 import React from "react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "../components/layout"
-import Image from "../components/image"
+import Main from "../components/main/main"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
-import MiniBio from "../components/miniBio"
+import { graphql } from "gatsby"
+import MiniBio from "../components/bio/miniBio"
 
 export default function PageTemplate({ data: { mdx, site } }) {
   return (
-    <Layout>
+    <Main>
       <SEO title={`${site.siteMetadata.author} — ${mdx.frontmatter.title}`} />
       <h1>{mdx.frontmatter.title}</h1>
       <MDXRenderer>{mdx.body}</MDXRenderer>
       <MiniBio />
-    </Layout>
+    </Main>
   )
 }
 

@@ -1,17 +1,21 @@
+/** @jsx jsx */
 import React from "react"
+import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import PostList from "../components/postList"
+import PostList from "../components/post/postList"
+import Main from "../components/main/main"
 
 export default () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <h1>Hi from the blog list page</h1>
-      <PostList />
+      <Main>
+        <Styled.h1>Welcome to the blog</Styled.h1>
+        <PostList />
+      </Main>
     </Layout>
   )
 }

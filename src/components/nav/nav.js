@@ -3,7 +3,7 @@ import React from "react"
 import { jsx, Styled } from "theme-ui"
 import styled from "@emotion/styled"
 import NavLink from "./navLink"
-import useNavLinkData from "../hooks/useNavLinkData"
+import useNavLinkData from "../../hooks/useNavLinkData"
 
 const Nav = styled.nav`
   position: fixed;

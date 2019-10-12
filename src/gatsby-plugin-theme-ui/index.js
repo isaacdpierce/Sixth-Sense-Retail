@@ -17,7 +17,8 @@ export default {
     heading: 1.125,
   },
   colors: {
-    text: "#fff",
+    text: "hsla(0, 0%, 90%, 1)",
+    header: "hsla(360, 100%, 100%, 1)",
     background: "#111",
     greyLight: "#999",
     greyMedium: "666",

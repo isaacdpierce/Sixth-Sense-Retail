@@ -1,15 +1,19 @@
+/** @jsx jsx */
 import React from "react"
+import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Main from "../components/main/main"
 
 const About = () => {
   return (
     <Layout>
       <SEO title="About" />
-      <h1>Hi from the about page</h1>
+      <Main>
+        <Styled.h1>Hi from the about page</Styled.h1>
+      </Main>
     </Layout>
   )
 }
