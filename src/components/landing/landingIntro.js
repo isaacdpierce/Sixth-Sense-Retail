@@ -1,9 +1,11 @@
+/** @jsx jsx */
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import styled from "@emotion/styled"
-import useSiteMetadata from "../../hooks/useSiteMetaData"
-import Image from "./introImage"
+import IntroBottomImage from "./introBottomImage"
+import IntroHeader from "./introHeader"
+import IntroBgImage from "./IntroBgImage"
+import IntroText from "./introText"
 
 const StyledIntro = styled.section`
   grid-column: 3 / 13;
@@ -11,27 +13,31 @@ const StyledIntro = styled.section`
   border: 2px solid #0b0b0b;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: hsl(0, 0%, 0%, 0.5);
 `
 
 const Figure = styled.figure`
-  width: 600px;
-  max-width: 90vw;
-  margin-bottom: 1.45rem;
+  padding-top: 300px;
+  grid-column: 1/ -1;
+  grid-row: 3/ -1;
+  opacity: 0.1;
   z-index: -1;
-  border: 40px inset #111;
 `
 
+const HeaderText = styled.div``
+
 const LandingIntro = () => {
-  const { description } = useSiteMetadata()
   return (
-    <StyledIntro>
-      <Styled.h2>{description}</Styled.h2>
+    <>
       <Figure>
-        <Image />
+        <IntroBgImage />
       </Figure>
-    </StyledIntro>
+      <StyledIntro sx={{ p: 7 }}>
+        <IntroHeader />
+        <IntroText />
+        <IntroBottomImage style={{ transform: "translateX(300px)" }} />
+      </StyledIntro>
+    </>
   )
 }
 

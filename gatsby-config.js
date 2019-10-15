@@ -3,10 +3,10 @@ const emoji = require(`remark-emoji`)
 
 module.exports = {
   siteMetadata: {
-    title: `Pierce Agency`,
+    title: `We The Agency`,
     description: `Inspiring the next phase of human connection and culture.`,
     author: `@isaacdpierce`,
-    headline: `Inspiring the next phase of human connection and culture.`,
+    headline: `We help people deliver their message and products to the world.`,
     url: `www.isaacpierce.io`,
   },
   plugins: [

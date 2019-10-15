@@ -1,10 +1,13 @@
 /** @jsx jsx */
 import React from "react"
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import styled from "@emotion/styled"
-
-import Image from "./headerBgImage"
+import Title from "../title/title"
+import BgImage from "./headerBgImage"
+import HeaderImage from "./headerImage"
 import Logo from "../logo/logo"
+import Frame from "../frame/frame"
+import useSiteMetaData from "../../hooks/useSiteMetaData"
 
 const Header = styled.header`
   grid-column: 1 / -1;
@@ -23,15 +26,40 @@ const Figure = styled.figure`
 `
 const StyledLogo = styled(Logo)`
   grid-column: 4 / span 3;
-  grid-row: 2 / span 2;
+  grid-row: 2;
+`
+
+const StyledHeaderImage = styled.div`
+  grid-column: 8 / span 4;
+  grid-row: 3 / span 3;
+`
+const StyledTitle = styled.div`
+  grid-column: 2 / span 6;
+  grid-row: 3 / span 2;
+  text-transform: uppercase;
+  letter-spacing: 1.45px;
 `
 
 export default () => {
+  const { description } = useSiteMetaData()
   return (
     <Header>
-      <StyledLogo className="header__logo" />
+      <StyledLogo />
+      <StyledTitle>
+        <Title
+          fontSize="6"
+          fontFamily="body"
+          fontWeight="body"
+          text={description}
+        />
+      </StyledTitle>
+      <StyledHeaderImage>
+        <Frame>
+          <HeaderImage />
+        </Frame>
+      </StyledHeaderImage>
       <Figure>
-        <Image />
+        <BgImage />
       </Figure>
     </Header>
   )
