@@ -56,9 +56,16 @@ module.exports = {
             options: {
               maxWidth: 1035,
               sizeByPixelDensity: true,
+              withWebp: true,
             },
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {
+        transitionTime: 1000,
       },
     },
     `gatsby-plugin-react-helmet`,

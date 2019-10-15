@@ -10,7 +10,6 @@ export default () => {
             author
             url
             headline
-            lang
           }
         }
       }

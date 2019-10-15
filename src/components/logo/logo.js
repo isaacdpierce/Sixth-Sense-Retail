@@ -12,9 +12,9 @@ const StyledLogo = styled.div`
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 3px;
-  background-color: hsl(0, 0%, 0%, 0.7);
+  /* background-color: hsl(0, 0%, 0%, 0.7); */
 `
 
 const Logo = ({ className }) => {

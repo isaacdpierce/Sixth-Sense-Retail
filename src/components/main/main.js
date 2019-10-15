@@ -5,7 +5,9 @@ import Layout from "../layout"
 import styled from "@emotion/styled"
 
 const Main = styled.main`
-  border: 1px solid peru;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: hsl(0, 0%, 0%);
   grid-column: 3 / 13;
   grid-row: 2 / -1;
   width: 100%;
@@ -14,4 +16,4 @@ const Main = styled.main`
   align-items: center;
 `
 
-export default ({ children }) => <Main sx={{ p: 7 }}>{children}</Main>
+export default ({ children }) => <Main sx={{ p: 7, mb: 7 }}>{children}</Main>

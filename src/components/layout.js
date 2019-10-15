@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import React from "react"
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
+import PageTransition from "gatsby-plugin-page-transitions"
 
 import Nav from "./nav/nav"
 
@@ -12,12 +13,10 @@ const Wrapper = styled.section`
   flex-direction: column;
   opacity: 0.95;
 `
-
-// Create a grid to  place the items
 const MainGrid = styled.section`
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: 10vh 100vh 1fr 10vh;
+  grid-template-rows: 10vh 100vh 1fr;
 `
 
 const Footer = styled.footer`
@@ -31,7 +30,9 @@ const Layout = ({ children }) => {
   return (
     <Wrapper sx={{ backgroundColor: "background" }}>
       <Nav />
-      <MainGrid>{children}</MainGrid>
+      <PageTransition>
+        <MainGrid>{children}</MainGrid>
+      </PageTransition>
       <Footer>
         <p sx={{ color: "greyLight", mb: 0 }}>
           © {new Date().getFullYear()}, Built by &nbsp;{" "}

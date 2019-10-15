@@ -1,5 +1,8 @@
+/** @jsx jsx */
 import React from "react"
+import { jsx } from "theme-ui"
 import Img from "gatsby-image"
+import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 
 const MiniBio = () => {
@@ -15,8 +18,18 @@ const MiniBio = () => {
     }
   `)
 
+  const StyledBio = styled.section`
+    display: flex;
+  `
+
+  const Text = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  `
+
   return (
-    <div style={{ display: "flex" }}>
+    <StyledBio>
       <Img
         style={{
           marginRight: "1rem",
@@ -26,11 +39,13 @@ const MiniBio = () => {
         fixed={data.file.childImageSharp.fixed}
         alt="Picture of me!"
       />
-      <div>
-        <h2 style={{ margin: 0 }}>My MiniBio</h2>
-        <p>I like to help people make things on the internet!</p>
-      </div>
-    </div>
+      <Text>
+        <h2 sx={{ p: 0, m: 0 }}>My MiniBio</h2>
+        <p sx={{ p: 0, m: 0 }}>
+          I create valuable connections between makers and buyers.
+        </p>
+      </Text>
+    </StyledBio>
   )
 }
 
