@@ -6,6 +6,7 @@ import IntroBottomImage from "./introBottomImage"
 import IntroHeader from "./introHeader"
 import IntroBgImage from "./IntroBgImage"
 import IntroText from "./introText"
+import Unconform from "./unconform"
 
 const StyledIntro = styled.section`
   grid-column: 3 / 13;
@@ -14,6 +15,7 @@ const StyledIntro = styled.section`
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 0%, 0.5);
+  position: relative;
 `
 
 const Figure = styled.figure`
@@ -35,7 +37,8 @@ const LandingIntro = () => {
       <StyledIntro sx={{ p: 7 }}>
         <IntroHeader />
         <IntroText />
-        <IntroBottomImage style={{ transform: "translateX(300px)" }} />
+        <Unconform />
+        <IntroBottomImage />
       </StyledIntro>
     </>
   )
