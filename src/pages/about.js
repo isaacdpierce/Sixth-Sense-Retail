@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from "react"
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import PageTransition from "gatsby-plugin-page-transitions"
 
@@ -13,7 +13,7 @@ const About = () => {
     <Layout>
       <SEO title="About" />
       <Main>
-        <Styled.h1>Hi from the about page</Styled.h1>
+        <h1>Hi from the about page</h1>
       </Main>
     </Layout>
   )

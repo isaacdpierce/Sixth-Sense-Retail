@@ -12,7 +12,7 @@ export default () => {
     <Layout>
       <SEO title="Contact" />
       <Main>
-        <Styled.h1>Contact Us!</Styled.h1>
+        <h1>Contact Us!</h1>
       </Main>
     </Layout>
   )

@@ -6,7 +6,7 @@ export default {
     heading: "Source Serif Pro",
     monospace: "Fira Mono, monospace",
   },
-  fontSizes: [12, 16, 18, 21, 24, 33, 48, 64, 96],
+  fontSizes: [12, 16, 18, 21, 24, 29, 48, 64, 96],
   fontWeights: {
     body: 300,
     heading: 700,

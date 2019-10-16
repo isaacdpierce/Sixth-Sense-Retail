@@ -26,7 +26,7 @@ const Figure = styled.figure`
 `
 const StyledLogo = styled(Logo)`
   grid-column: 4 / span 3;
-  grid-row: 2;
+  grid-row: 1 / span 2;
 `
 
 const StyledHeaderImage = styled.div`
@@ -34,7 +34,7 @@ const StyledHeaderImage = styled.div`
   grid-row: 3 / span 3;
 `
 const StyledTitle = styled.div`
-  grid-column: 2 / span 6;
+  grid-column: 2 / span 5;
   grid-row: 3 / span 2;
   text-transform: uppercase;
   letter-spacing: 1.45px;
@@ -48,7 +48,7 @@ export default () => {
       <StyledTitle>
         <Title
           fontSize="6"
-          fontFamily="body"
+          fontFamily="heading"
           fontWeight="body"
           text={description}
         />

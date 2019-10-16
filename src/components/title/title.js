@@ -11,6 +11,7 @@ export default ({
   return (
     <h2
       sx={{
+        pt: 5,
         fontSize: `${fontSize}`,
         fontFamily: `${fontFamily}`,
         fontWeight: `${fontWeight}`,
