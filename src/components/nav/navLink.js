@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 
 const ListItem = styled.li`
   letter-spacing: -2px;
+  text-shadow: 0px 1px 2px black;
 `
 
 const StyledLink = styled(Link)``

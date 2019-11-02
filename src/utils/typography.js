@@ -39,13 +39,13 @@ const theme = {
   boldWeight: 700,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     a: {
-      color: "#009999",
+      color: "#62bdbd",
       textDecoration: "none",
       transition: "color .3s ease-in-out",
       fontSize: fs[4],
     },
-    "a:hover,a:active": {
-      color: "#62bdbd",
+    "a:hover, a:active": {
+      color: "#97f7f7",
     },
     "h1,h2,h3,h4,h5,h6": {
       marginTop: rhythm(2),

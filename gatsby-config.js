@@ -6,7 +6,7 @@ module.exports = {
     title: `6th Sense Retail`,
     description: `Inspiring the next phase of human connection and culture.`,
     author: `@isaacdpierce`,
-    headline: `We help people deliver their message and products to the world.`,
+    headline: `We help people deliver their messages and products to the world.`,
     url: `www.isaacpierce.io`,
   },
   plugins: [

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { useState, useEffect } from "react"
 import { jsx } from "theme-ui"
-import { css } from "@emotion/core"
+import { css, keyframes } from "@emotion/core"
 import useSiteMetaData from "../../hooks/useSiteMetaData"
 import styled from "@emotion/styled"
 import NavLink from "./navLink"
@@ -31,17 +31,25 @@ const SmallLogo = styled.div`
 `
 
 const darkBg = css`
-  background-color: hsl(0, 0%, 0%, 0.9);
+  background-color: hsl(0, 0%, 0%, 90%);
 `
 const transBg = css`
-  background-color: hsl(0, 0%, 0%, 0);
+  background-color: hsl(0, 0%, 0%, 30%);
 `
+const show = keyframes`
+  from {
+    color: transparent;
+  }
 
+  to {
+    color: white; 
+  }
+`
 export default () => {
-  const [bgColor, setBgColor] = useState()
+  const [bgColor, setBgColor] = useState(transBg)
   const [logo, setLogo] = useState(false)
   const { edges } = useNavLinkData()
-  const { title } = useSiteMetadata()
+  const { title } = useSiteMetaData()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +66,18 @@ export default () => {
 
   return (
     <Nav css={bgColor}>
-      <SmallLogo>{logo && <h2 sx={{ m: 0, p: 0 }}>{title}</h2>}</SmallLogo>
+      <SmallLogo>
+        {logo && (
+          <h2
+            sx={{ m: 0, p: 0 }}
+            css={css`
+              animation: ${show} 1s ease-in-out;
+            `}
+          >
+            {title}
+          </h2>
+        )}
+      </SmallLogo>
       <div>
         <ul
           sx={{

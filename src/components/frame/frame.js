@@ -21,6 +21,7 @@ const Inset = styled.div`
   border-left: 5px solid #0e0e0e;
   border-right: 5px solid #0e0e0e;
   border-bottom: 5px solid #1e1e1e;
+  overflow: hidden;
 `
 
 export default ({ children }) => {

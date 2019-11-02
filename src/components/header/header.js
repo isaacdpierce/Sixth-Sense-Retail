@@ -10,6 +10,7 @@ import Logo from "../logo/logo"
 import Frame from "../frame/frame"
 import useSiteMetaData from "../../hooks/useSiteMetaData"
 import Line from "../lines/line"
+import { Link } from "gatsby"
 
 const Header = styled.header`
   grid-column: 1 / -1;
@@ -42,6 +43,7 @@ const StyledTitle = styled.div`
   grid-row: 3 / span 2;
   text-transform: uppercase;
   letter-spacing: 1.45px;
+  text-shadow: 0px 1px 2px black;
 `
 
 export default () => {
@@ -90,7 +92,18 @@ export default () => {
       </StyledTitle>
       <StyledHeaderImage>
         <Frame>
-          <HeaderImage />
+          <Link to="/inspire">
+            <div
+              css={css`
+                transition: transform 3s ease-in-out;
+                &:hover {
+                  transform: scale(1.5);
+                }
+              `}
+            >
+              <HeaderImage />
+            </div>
+          </Link>
         </Frame>
       </StyledHeaderImage>
       <Figure>

@@ -12,11 +12,12 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   opacity: 0.95;
+  position: relative;
 `
 const MainGrid = styled.section`
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: 10vh 100vh 1fr;
+  grid-template-rows: 8vh 100vh 1fr;
 `
 
 const Footer = styled.footer`
