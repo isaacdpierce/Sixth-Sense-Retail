@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react"
 import { jsx } from "theme-ui"
 import { css } from "@emotion/core"
-
+import useSiteMetaData from "../../hooks/useSiteMetaData"
 import styled from "@emotion/styled"
 import NavLink from "./navLink"
 import useNavLinkData from "../../hooks/useNavLinkData"
@@ -27,7 +27,7 @@ const Nav = styled.nav`
 `
 
 const SmallLogo = styled.div`
-  width: 200px;
+  width: 300px;
 `
 
 const darkBg = css`
@@ -41,6 +41,7 @@ export default () => {
   const [bgColor, setBgColor] = useState()
   const [logo, setLogo] = useState(false)
   const { edges } = useNavLinkData()
+  const { title } = useSiteMetadata()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,13 +58,7 @@ export default () => {
 
   return (
     <Nav css={bgColor}>
-      <SmallLogo>
-        {logo && (
-          <h2 sx={{ m: 0, p: 0 }}>
-            We<sub>The Agency</sub>
-          </h2>
-        )}
-      </SmallLogo>
+      <SmallLogo>{logo && <h2 sx={{ m: 0, p: 0 }}>{title}</h2>}</SmallLogo>
       <div>
         <ul
           sx={{

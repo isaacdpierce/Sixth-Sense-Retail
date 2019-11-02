@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
+import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import Title from "../title/title"
 import BgImage from "./headerBgImage"
@@ -8,6 +9,7 @@ import HeaderImage from "./headerImage"
 import Logo from "../logo/logo"
 import Frame from "../frame/frame"
 import useSiteMetaData from "../../hooks/useSiteMetaData"
+import Line from "../lines/line"
 
 const Header = styled.header`
   grid-column: 1 / -1;
@@ -15,6 +17,8 @@ const Header = styled.header`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
+  position: relative;
+  width: 100vw;
 `
 
 const Figure = styled.figure`
@@ -25,8 +29,8 @@ const Figure = styled.figure`
   /* clip-path: polygon(0 0, 0 76%, 33% 100%, 100% 77%, 100% 0%); */
 `
 const StyledLogo = styled(Logo)`
-  grid-column: 4 / span 3;
-  grid-row: 2;
+  grid-column: 3 / span 6;
+  grid-row: 1 / span 2;
 `
 
 const StyledHeaderImage = styled.div`
@@ -44,14 +48,45 @@ export default () => {
   const { description } = useSiteMetaData()
   return (
     <Header>
+      <Line
+        css={css`
+          height: 112vw;
+          width: 10px;
+          background: linear-gradient(aqua, transparent);
+          position: absolute;
+          top: -400px;
+          left: 100vw;
+          transform: rotate(70deg);
+          z-index: -1;
+        `}
+      />
+      <Line
+        css={css`
+          height: 1000px;
+          width: 50px;
+          background: linear-gradient(aqua, transparent);
+          position: absolute;
+          top: -100px;
+          left: 200px;
+          transform: rotate(-30deg);
+          z-index: -1;
+        `}
+      />
+      <Line
+        css={css`
+          height: 100vw;
+          width: 100px;
+          background: linear-gradient(aqua, transparent);
+          position: absolute;
+          top: 100px;
+          left: 100vw;
+          transform: rotate(70deg);
+          z-index: -1;
+        `}
+      />
       <StyledLogo />
       <StyledTitle>
-        <Title
-          fontSize="6"
-          fontFamily="body"
-          fontWeight="body"
-          text={description}
-        />
+        <Title fontSize="5" fontWeight="body" text={description} />
       </StyledTitle>
       <StyledHeaderImage>
         <Frame>
