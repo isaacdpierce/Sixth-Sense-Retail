@@ -9,7 +9,7 @@ const delay = keyframes`
 0% {
   opacity: 0;
 }
-60% {
+20% {
   opacity: 0;
 }
 100% {
@@ -32,4 +32,6 @@ const Main = styled.main`
   z-index: 2;
 `
 
-export default ({ children }) => <Main sx={{ p: 7, mb: 7 }}>{children}</Main>
+export default ({ children }) => (
+  <Main sx={{ px: 8, py: 6, mb: 7 }}>{children}</Main>
+)

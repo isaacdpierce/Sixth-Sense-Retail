@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
         <MainGrid>{children}</MainGrid>
       </PageTransition>
       <Footer>
-        <p sx={{ color: "greyLight", mb: 0 }}>
+        <p sx={{ color: "greyLight", mt: 7, mb: 0 }}>
           © {new Date().getFullYear()}, Built by &nbsp;{" "}
           <Link to="https://www.isaacpierce.io" sx={{ fontFamily: "heading" }}>
             {" "}
