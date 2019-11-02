@@ -4,7 +4,7 @@ import { jsx } from "theme-ui"
 import styled from "@emotion/styled"
 import IntroBottomImage from "./introBottomImage"
 import IntroHeader from "./introHeader"
-import IntroBgImage from "./IntroBgImage"
+import IntroBgImage from "./introBgImage"
 import IntroText from "./introText"
 import Unconform from "./unconform"
 
