@@ -30,7 +30,7 @@ const Figure = styled.figure`
 `
 const StyledLogo = styled(Logo)`
   grid-column: 3 / span 6;
-  grid-row: 1 / span 2;
+  grid-row: 2 / span 1;
 `
 
 const StyledHeaderImage = styled.div`

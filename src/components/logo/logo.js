@@ -1,10 +1,9 @@
 /** @jsx jsx */
 import React from "react"
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import useSiteMetadata from "../../hooks/useSiteMetaData"
 
 const StyledLogo = styled.div`
   display: flex;
@@ -13,16 +12,14 @@ const StyledLogo = styled.div`
   text-align: center;
   text-transform: uppercase;
   border-radius: 3px;
-  /* background-color: hsl(0, 0%, 0%, 0.7); */
+  letter-spacing: -20px;
 `
 
 const Logo = ({ className }) => {
-  const { title } = useSiteMetadata()
-
   return (
     <StyledLogo className={className}>
       <Link to="/">
-        <h1 sx={{ fontSize: 6, m: 0 }}>{title}</h1>
+        <h1 sx={{ fontSize: 8, m: 0 }}>6SR</h1>
       </Link>
     </StyledLogo>
   )

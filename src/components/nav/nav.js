@@ -47,7 +47,6 @@ const show = keyframes`
 `
 export default () => {
   const [bgColor, setBgColor] = useState(transBg)
-  const [logo, setLogo] = useState(false)
   const { edges } = useNavLinkData()
   const { title } = useSiteMetaData()
 
@@ -55,10 +54,8 @@ export default () => {
     const handleScroll = () => {
       if (window.scrollY < 50) {
         setBgColor(transBg)
-        setLogo(false)
       } else {
         setBgColor(darkBg)
-        setLogo(true)
       }
     }
     window.addEventListener("scroll", handleScroll)
@@ -67,16 +64,7 @@ export default () => {
   return (
     <Nav css={bgColor}>
       <SmallLogo>
-        {logo && (
-          <h2
-            sx={{ m: 0, p: 0 }}
-            css={css`
-              animation: ${show} 1s ease-in-out;
-            `}
-          >
-            {title}
-          </h2>
-        )}
+        <h2 sx={{ m: 0, p: 0 }}>{title}</h2>
       </SmallLogo>
       <div>
         <ul
