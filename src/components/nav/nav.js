@@ -36,15 +36,6 @@ const darkBg = css`
 const transBg = css`
   background-color: hsl(0, 0%, 0%, 30%);
 `
-const show = keyframes`
-  from {
-    color: transparent;
-  }
-
-  to {
-    color: white; 
-  }
-`
 export default () => {
   const [bgColor, setBgColor] = useState(transBg)
   const { edges } = useNavLinkData()

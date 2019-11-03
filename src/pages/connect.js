@@ -16,8 +16,8 @@ const StyledHeaderImage = styled.div`
 
 const fullscreen = keyframes`
     from {
-    margin-left: 30vw;
-    margin-top: 30vh;
+    margin-left: 23vw;
+    margin-top: 23vh;
     width: 40vw; 
   }
 

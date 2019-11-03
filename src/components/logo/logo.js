@@ -13,6 +13,7 @@ const StyledLogo = styled.div`
   text-transform: uppercase;
   border-radius: 3px;
   letter-spacing: -20px;
+  text-shadow: 0px 2px 3px black;
 `
 
 const Logo = ({ className }) => {
