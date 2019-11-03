@@ -23,7 +23,6 @@ const Blog = () => {
       <SEO title="Blog" />
       <Main>
         <h1 sx={{ fontSize: 7 }}>Oh what a lovely day.</h1>
-        <h3>Engage. Unconform.</h3>
         <PostList />
       </Main>
       <Figure>
