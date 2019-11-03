@@ -13,7 +13,7 @@ const PostList = () => {
   const { edges: posts } = useBlogData()
   return (
     <div>
-      <h1>This is an MDX Blog</h1>
+      <h2>Engage. Unconform.</h2>
       <StyledList>
         {posts.map(({ node: post }) => (
           <li key={post.id}>

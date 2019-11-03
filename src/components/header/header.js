@@ -27,7 +27,6 @@ const Figure = styled.figure`
   grid-row: 1/ -1;
   opacity: 0.1;
   z-index: -1;
-  /* clip-path: polygon(0 0, 0 76%, 33% 100%, 100% 77%, 100% 0%); */
 `
 const StyledLogo = styled(Logo)`
   grid-column: 3 / span 6;

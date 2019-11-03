@@ -29,8 +29,12 @@ const theme = {
       name: "Source Sans Pro",
       styles: ["400", "400i", "700"],
     },
+    {
+      name: "Cormorant Garamond",
+      styles: ["100", "300", "400", "600"],
+    },
   ],
-  headerFontFamily: ["Source Serif Pro", "sans-serif"],
+  headerFontFamily: ["Cormorant Garamond", "sans-serif"],
   bodyFontFamily: ["Source Sans Pro", "sans-serif"],
   headerColor: "#fff",
   bodyColor: "#eee",
