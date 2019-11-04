@@ -20,6 +20,24 @@ const Headline = styled.h2`
   text-shadow: 0px 1px 2px black;
 `
 
+const ImageWrapper = styled.div`
+  transition: all 3s ease-in-out;
+  position: relative;
+  &:hover {
+    transform: scale(1.5) translate(15%, -5%);
+    &:before {
+      content: "Click to enter.";
+      font-size: 1rem;
+      color: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+  }
+`
+
 export default () => {
   const { headline } = useSiteMetadata()
   return (
@@ -27,16 +45,9 @@ export default () => {
       <div style={{ width: "600px" }}>
         <Frame>
           <Link to="/connect">
-            <div
-              css={css`
-                transition: transform 2s ease-in-out;
-                &:hover {
-                  transform: scale(1.5) translate(15%, -5%);
-                }
-              `}
-            >
+            <ImageWrapper>
               <IntroHeadImage />
-            </div>
+            </ImageWrapper>
           </Link>
         </Frame>
       </div>

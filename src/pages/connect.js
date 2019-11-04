@@ -11,10 +11,10 @@ import Main from "../components/main/main"
 const StyledHeaderImage = styled.div`
   width: 100vw;
   grid-column: 1 / -1;
-  grid-row: 1;
+  grid-row: 1 / -2;
 `
 
-const fullscreen = keyframes`
+const fullScreen = keyframes`
     from {
     margin-left: 23vw;
     margin-top: 23vh;
@@ -35,7 +35,7 @@ const Inspire = () => {
       <StyledHeaderImage>
         <div
           css={css`
-            animation: ${fullscreen} 3s ease;
+            animation: ${fullScreen} 3s ease;
           `}
         >
           <IntroHeadImage />

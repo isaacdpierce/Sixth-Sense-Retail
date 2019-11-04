@@ -10,7 +10,6 @@ const OuterFrame = styled.div`
 `
 
 const InnerFrame = styled.div`
-  max-width: 90vw;
   z-index: -1;
   border: 40px solid #0c0c0c;
   border-radius: 3px;

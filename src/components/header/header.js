@@ -45,6 +45,24 @@ const StyledTitle = styled.div`
   text-shadow: 0px 1px 2px black;
 `
 
+const ImageWrapper = styled.div`
+  transition: all 3s ease-in-out;
+  position: relative;
+  &:hover {
+    transform: scale(1.5);
+    &:before {
+      content: "Click to enter.";
+      font-size: 1rem;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+  }
+`
+
 export default () => {
   const { description } = useSiteMetaData()
   return (
@@ -92,16 +110,9 @@ export default () => {
       <StyledHeaderImage>
         <Frame>
           <Link to="/inspire">
-            <div
-              css={css`
-                transition: transform 3s ease-in-out;
-                &:hover {
-                  transform: scale(1.5);
-                }
-              `}
-            >
+            <ImageWrapper>
               <HeaderImage />
-            </div>
+            </ImageWrapper>
           </Link>
         </Frame>
       </StyledHeaderImage>
