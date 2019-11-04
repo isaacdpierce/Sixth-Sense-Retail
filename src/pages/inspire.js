@@ -42,7 +42,7 @@ const Inspire = () => {
         </div>
       </StyledHeaderImage>
       <Main>
-        <h1>We help you get inspired.</h1>
+        <h1>Give people more than what they expect.</h1>
         <p>
           Entrepreneur storytelling, academic, our work co-create support NGO.
           White paper collaborative consumption social intrapreneurship benefit

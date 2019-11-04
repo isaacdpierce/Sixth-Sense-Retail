@@ -24,6 +24,7 @@ const About = () => {
         <h1 sx={{ fontSize: 7 }}>
           Reignite the flames of culture and connection.
         </h1>
+
         <p>
           Partner network social proof churn rate pitch crowdfunding bandwidth
           seed money pivot network effects. Marketing innovator freemium
