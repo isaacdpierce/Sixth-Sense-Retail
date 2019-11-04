@@ -5,7 +5,7 @@ import { css, keyframes } from "@emotion/core"
 import useSiteMetaData from "../../hooks/useSiteMetaData"
 import styled from "@emotion/styled"
 import NavLink from "./navLink"
-import { Link } from "gatsby"
+import SmallLogo from "../logo/smallLogo"
 import useNavLinkData from "../../hooks/useNavLinkData"
 
 const Nav = styled.nav`
@@ -25,10 +25,6 @@ const Nav = styled.nav`
     display: flex;
     text-shadow: 0 0 1px black;
   }
-`
-
-const SmallLogo = styled.div`
-  width: 300px;
 `
 
 const darkBg = css`
@@ -55,11 +51,7 @@ export default () => {
 
   return (
     <Nav css={bgColor}>
-      <Link to="/">
-        <SmallLogo>
-          <h2 sx={{ m: 0, p: 0 }}>{title}</h2>
-        </SmallLogo>
-      </Link>
+      <SmallLogo />
       <div>
         <ul
           sx={{

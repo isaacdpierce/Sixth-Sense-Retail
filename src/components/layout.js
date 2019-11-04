@@ -13,6 +13,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   opacity: 0.95;
   position: relative;
+  overflow: hidden;
 `
 const MainGrid = styled.section`
   display: grid;
