@@ -4,7 +4,7 @@ import { jsx } from "theme-ui"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import Title from "../title/title"
-import BgImage from "./headerBgImage"
+import HeaderBgImage from "./headerBgImage"
 import HeaderImage from "./headerImage"
 import Logo from "../logo/abbrvLogo"
 import Frame from "../frame/frame"
@@ -18,15 +18,12 @@ const Header = styled.header`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  position: relative;
   width: 100vw;
 `
 
-const Figure = styled.figure`
+const StyledBgImage = styled(HeaderBgImage)`
   grid-column: 1/ -1;
   grid-row: 1/ -1;
-  opacity: 0.1;
-  z-index: -1;
 `
 const StyledLogo = styled(Logo)`
   grid-column: 3 / span 6;
@@ -65,20 +62,9 @@ const ImageWrapper = styled.div`
 
 export default () => {
   const { description } = useSiteMetaData()
+
   return (
     <Header>
-      <Line
-        css={css`
-          height: 112vw;
-          width: 10px;
-          background: linear-gradient(aqua, transparent);
-          position: absolute;
-          top: -400px;
-          left: 100vw;
-          transform: rotate(70deg);
-          z-index: -1;
-        `}
-      />
       <Line
         css={css`
           height: 1000px;
@@ -86,8 +72,20 @@ export default () => {
           background: linear-gradient(aqua, transparent);
           position: absolute;
           top: -100px;
-          left: 200px;
+          left: 250px;
           transform: rotate(-30deg);
+          z-index: -1;
+        `}
+      />
+      <Line
+        css={css`
+          height: 112vw;
+          width: 10px;
+          background: linear-gradient(aqua, transparent);
+          position: absolute;
+          top: -500px;
+          left: 100vw;
+          transform: rotate(70deg);
           z-index: -1;
         `}
       />
@@ -116,9 +114,7 @@ export default () => {
           </Link>
         </Frame>
       </StyledHeaderImage>
-      <Figure>
-        <BgImage />
-      </Figure>
+      <StyledBgImage className="header-background-image" />
     </Header>
   )
 }
