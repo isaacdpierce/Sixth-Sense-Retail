@@ -20,7 +20,7 @@ const Logo = ({ className }) => {
   return (
     <StyledLogo className={className}>
       <Link to="/">
-        <h1 sx={{ fontSize: 8, m: 0 }}>6SR</h1>
+        <h1 sx={{ fontSize: 8, m: 0 }}>IP</h1>
       </Link>
     </StyledLogo>
   )

@@ -20,7 +20,7 @@ export default () => {
             color: #e3e3e3;
           `}
         >
-          6th
+          ip
         </span>
         <span
           sx={{ fontFamily: "heading" }}
@@ -29,7 +29,7 @@ export default () => {
             font-weight: 100;
           `}
         >
-          Sense
+          Blog
         </span>
         <span
           sx={{ fontFamily: "body" }}
@@ -37,7 +37,7 @@ export default () => {
             color: #e3e3e3;
           `}
         >
-          Retail
+          Theme
         </span>
       </SmallLogo>
     </Link>

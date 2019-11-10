@@ -78,9 +78,9 @@ export default () => {
         />
         <Line
           css={css`
-            height: 112vw;
+            height: 92vw;
             width: 10px;
-            top: -500px;
+            top: -300px;
             left: 100vw;
             transform: rotate(70deg);
           `}
