@@ -7,32 +7,15 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Main from "../components/main/main"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import PostList from "../components/post/postList"
+import BgImage from "../components/background/bgImage"
 
-const Figure = styled.figure`
+const StyledBg = styled.div`
   grid-column: 1/ -1;
   grid-row: 1/ -1;
-  opacity: 0.5;
-  z-index: -1;
 `
 
-const Blog = () => {
-  return (
-    <Layout>
-      <SEO title="Blog" />
-      <Main>
-        <h1 sx={{ fontSize: 7 }}>Oh what a lovely day.</h1>
-        <PostList />
-      </Main>
-      <Figure>
-        <BgImage />
-      </Figure>
-    </Layout>
-  )
-}
-
-const BgImage = () => {
+export default () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "mall-4.jpg" }) {
@@ -45,7 +28,19 @@ const BgImage = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <Layout>
+      <SEO title="Blog" />
+      <Main>
+        <h1 sx={{ fontSize: 7 }}>Oh what a lovely day.</h1>
+        <PostList />
+      </Main>
+      <StyledBg>
+        <BgImage
+          className="blog"
+          fluid={data.placeholderImage.childImageSharp.fluid}
+        />
+      </StyledBg>
+    </Layout>
+  )
 }
-
-export default Blog

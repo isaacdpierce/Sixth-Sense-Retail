@@ -5,8 +5,9 @@ import { css } from "@emotion/core"
 export default ({ className, fluid, opacity = 0.1, zIndex = -1 }) => {
   return (
     <Img
-      className={className}
+      className={`${className}-background-image`}
       alt=""
+      role="presentation"
       fluid={fluid}
       css={css`
         opacity: ${opacity};

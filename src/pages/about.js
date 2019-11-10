@@ -7,16 +7,26 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Main from "../components/main/main"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import BgImage from "../components/background/bgImage"
 
-const Figure = styled.figure`
+const StyledBg = styled.div`
   grid-column: 1/ -1;
   grid-row: 1/ -1;
-  opacity: 0.5;
-  z-index: -1;
 `
 
-const About = () => {
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "structure.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <SEO title="About" />
@@ -57,27 +67,12 @@ const About = () => {
           shift buzz niche market lean startup pitch pivot.
         </p>
       </Main>
-      <Figure>
-        <BgImage />
-      </Figure>
+      <StyledBg>
+        <BgImage
+          className="about"
+          fluid={data.placeholderImage.childImageSharp.fluid}
+        />
+      </StyledBg>
     </Layout>
   )
 }
-
-const BgImage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "structure.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-}
-
-export default About

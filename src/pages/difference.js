@@ -9,12 +9,6 @@ import SEO from "../components/seo"
 import Main from "../components/main/main"
 import { Link } from "gatsby"
 
-const StyledHeaderImage = styled.div`
-  width: 100vw;
-  grid-column: 1 / -1;
-  grid-row: 1;
-`
-
 const fullscreen = keyframes`
     from {
     margin-left: 40vw;
@@ -29,18 +23,19 @@ const fullscreen = keyframes`
   }
 `
 
-const Inspire = () => {
+const StyledHeaderImage = styled.div`
+  width: 100vw;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  animation: ${fullscreen} 3s ease;
+`
+
+export default () => {
   return (
     <Layout>
       <SEO title="Inspire" />
       <StyledHeaderImage>
-        <div
-          css={css`
-            animation: ${fullscreen} 3s ease;
-          `}
-        >
-          <MainImage />
-        </div>
+        <MainImage />
       </StyledHeaderImage>
       <Main>
         <h1>Refresh your thinking.</h1>
@@ -73,5 +68,3 @@ const Inspire = () => {
     </Layout>
   )
 }
-
-export default Inspire

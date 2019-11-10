@@ -8,12 +8,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Main from "../components/main/main"
 
-const StyledHeaderImage = styled.div`
-  width: 100vw;
-  grid-column: 1 / -1;
-  grid-row: 1;
-`
-
 const fullscreen = keyframes`
     from {
     margin-left: 59vw;
@@ -28,18 +22,19 @@ const fullscreen = keyframes`
   }
 `
 
-const Inspire = () => {
+const StyledHeaderImage = styled.div`
+  width: 100vw;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  animation: ${fullscreen} 3s ease;
+`
+
+export default () => {
   return (
     <Layout>
       <SEO title="Inspire" />
       <StyledHeaderImage>
-        <div
-          css={css`
-            animation: ${fullscreen} 3s ease;
-          `}
-        >
-          <HeaderImage />
-        </div>
+        <HeaderImage />
       </StyledHeaderImage>
       <Main>
         <h1>Give people more than what they expect.</h1>
@@ -69,5 +64,3 @@ const Inspire = () => {
     </Layout>
   )
 }
-
-export default Inspire

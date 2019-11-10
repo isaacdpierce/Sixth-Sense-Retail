@@ -7,31 +7,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Main from "../components/main/main"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import BgImage from "../components/background/bgImage"
 
-const Figure = styled.figure`
+const StyledBg = styled.div`
   grid-column: 1/ -1;
   grid-row: 1/ -1;
-  opacity: 0.5;
-  z-index: -1;
 `
 
-const Contact = () => {
-  return (
-    <Layout>
-      <SEO title="Contact" />
-      <Main>
-        <h1 sx={{ fontSize: 7 }}>We love to hear your ideas and questions.</h1>
-        <h2>Never hesitate to contact us.</h2>
-      </Main>
-      <Figure>
-        <BgImage />
-      </Figure>
-    </Layout>
-  )
-}
-
-const BgImage = () => {
+export default () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "mall-3.jpg" }) {
@@ -44,7 +27,19 @@ const BgImage = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <Layout>
+      <SEO title="Contact" />
+      <Main>
+        <h1 sx={{ fontSize: 7 }}>We love to hear your ideas and questions.</h1>
+        <h2>Never hesitate to contact us.</h2>
+      </Main>
+      <StyledBg>
+        <BgImage
+          className="contact"
+          fluid={data.placeholderImage.childImageSharp.fluid}
+        />
+      </StyledBg>
+    </Layout>
+  )
 }
-
-export default Contact
