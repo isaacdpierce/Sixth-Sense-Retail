@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { css } from "@emotion/core"
 
-const HeaderBgImage = ({ className, fluid, opacity = 0.1, zIndex = -1 }) => {
+export default ({ className, fluid, opacity = 0.1, zIndex = -1 }) => {
   return (
     <Img
       className={className}
@@ -15,5 +15,3 @@ const HeaderBgImage = ({ className, fluid, opacity = 0.1, zIndex = -1 }) => {
     />
   )
 }
-
-export default HeaderBgImage

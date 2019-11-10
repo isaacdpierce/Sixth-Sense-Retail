@@ -19,11 +19,12 @@ const Header = styled.header`
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
   width: 100vw;
+  position: relative;
 `
 
 const StyledBgImage = styled(HeaderBgImage)`
   grid-column: 1/ -1;
-  grid-row: 1/ -1;
+  grid-row: 1 / -1;
 `
 const StyledLogo = styled(Logo)`
   grid-column: 3 / span 6;
@@ -64,57 +65,41 @@ export default () => {
   const { description } = useSiteMetaData()
 
   return (
-    <Header>
-      <Line
-        css={css`
-          height: 1000px;
-          width: 50px;
-          background: linear-gradient(aqua, transparent);
-          position: absolute;
-          top: -100px;
-          left: 250px;
-          transform: rotate(-30deg);
-          z-index: -1;
-        `}
-      />
-      <Line
-        css={css`
-          height: 112vw;
-          width: 10px;
-          background: linear-gradient(aqua, transparent);
-          position: absolute;
-          top: -500px;
-          left: 100vw;
-          transform: rotate(70deg);
-          z-index: -1;
-        `}
-      />
-      <Line
-        css={css`
-          height: 100vw;
-          width: 100px;
-          background: linear-gradient(aqua, transparent);
-          position: absolute;
-          top: 100px;
-          left: 100vw;
-          transform: rotate(70deg);
-          z-index: -1;
-        `}
-      />
-      <StyledLogo />
-      <StyledTitle>
-        <Title fontSize="5" fontWeight="body" text={description} />
-      </StyledTitle>
-      <StyledHeaderImage>
-        <Frame>
-          <Link to="/inspire">
-            <ImageWrapper>
-              <HeaderImage />
-            </ImageWrapper>
-          </Link>
-        </Frame>
-      </StyledHeaderImage>
+    <>
+      <Header>
+        <Line
+          css={css`
+            height: 1000px;
+            width: 100px;
+            top: -100px;
+            left: 250px;
+            transform: rotate(-30deg);
+          `}
+        />
+        <Line
+          css={css`
+            height: 112vw;
+            width: 10px;
+            top: -500px;
+            left: 100vw;
+            transform: rotate(70deg);
+          `}
+        />
+        <StyledLogo />
+        <StyledTitle>
+          <Title fontSize="5" fontWeight="body" text={description} />
+        </StyledTitle>
+        <StyledHeaderImage>
+          <Frame>
+            <Link to="/inspire">
+              <ImageWrapper>
+                <HeaderImage />
+              </ImageWrapper>
+            </Link>
+          </Frame>
+        </StyledHeaderImage>
+      </Header>
       <StyledBgImage className="header-background-image" />
-    </Header>
+    </>
   )
 }

@@ -2,7 +2,6 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const OuterFrame = styled.div`
-  min-width: 350px;
   border: 1px solid black;
   border-top: 1px solid #1e1e1e;
   border-radius: 3px;
