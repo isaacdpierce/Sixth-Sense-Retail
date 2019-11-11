@@ -3,7 +3,7 @@
   IP Blog Starter Theme
 </h1>
 
-## About
+# About
 
 This starter blog theme was built on top of the Gatsby default starter. 
 
@@ -13,6 +13,9 @@ This starter blog theme was built on top of the Gatsby default starter.
 - 16 column CSS Grid for easy customizations.
 - Typography.js with a custom theme object.
 - Netlify CMS connection.
+- MDX setup for JSX blog posts
+- font files installed through NPM and required in gatsby-browser.js
+- Page transitions
 
 ## Netlify
 
@@ -24,10 +27,13 @@ Change titles and descriptions in gatsby-config.js
 
 ## Typography and Styles
 
-Adjust ThemeUI typography/styles in gatsby-plugin-theme/index.js
-Adjust typography settings in theme object in utils.js
+Change MDX styles with ThemeUI in gatsby-plugin-theme/index.js
+Adjust typography settings in theme object in utils/typography.js
 Fonts are added via npm and entered in the gatsby-browser.js
 
-## Global Styles
+## Custom hooks
 
-Adjust global styles (including the base grid layout) in globalStyles.js
+UseBlogData - To get MDX posts
+UseNavLinkData - to get the navLinks
+useSiteMetaData
+
