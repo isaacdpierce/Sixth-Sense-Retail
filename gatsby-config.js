@@ -3,7 +3,7 @@ const emoji = require(`remark-emoji`)
 
 module.exports = {
   siteMetadata: {
-    title: `6th Sense Retail`,
+    title: `IP Blog Theme`,
     description: `Inspiring the next phase of human connection and culture.`,
     author: `@isaacdpierce`,
     headline: `We help people deliver their messages and products to the world.`,
