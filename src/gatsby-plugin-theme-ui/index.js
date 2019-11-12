@@ -1,5 +1,5 @@
 export default {
-  breakpoints: ["40em", "52em", "64em"],
+  breakpoints: ['576px', '768px', '992px', '1200px'],
   space: [0, 1, 3, 7, 9, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: "Source Sans Pro",

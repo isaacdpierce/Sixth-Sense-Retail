@@ -8,6 +8,7 @@ import NavLink from "./navLink"
 import SmallLogo from "../logo/smallLogo"
 import useNavLinkData from "../../hooks/useNavLinkData"
 
+
 const Nav = styled.nav`
   position: fixed;
   top: 0;
@@ -19,6 +20,11 @@ const Nav = styled.nav`
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
+@media (max-width: 720px) {
+        flex-direction: column;
+        text-align: center;
+      }
+
 
   ul {
     list-style: none;
@@ -50,14 +56,20 @@ export default () => {
   }, [])
 
   return (
-    <Nav css={bgColor}>
+    <Nav 
+        css={bgColor}  
+        sx={{
+            pt: [4, 4, 0, 0],
+            m: 0,
+          }}>
       <SmallLogo />
       <div>
         <ul
           sx={{
-            pt: 4,
+            pt: [0,0, 4,4],
             m: 0,
           }}
+    
         >
           {edges.map(({ node }) => {
             return (
