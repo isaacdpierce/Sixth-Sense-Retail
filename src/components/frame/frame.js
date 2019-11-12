@@ -6,7 +6,8 @@ const OuterFrame = styled.div`
   border-top: 1px solid #1e1e1e;
   border-radius: 3px;
   box-shadow: 0px 10px 10px 10px hsl(0, 0%, 0%, 0.6);
-   min-width: 360px;
+  min-width: 360px;
+  max-width: 99vw;
 `
 
 const InnerFrame = styled.div`

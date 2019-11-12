@@ -20,6 +20,11 @@ const Header = styled.header`
   grid-template-rows: repeat(6, 1fr);
   width: 100vw;
   position: relative;
+    @media (max-width: 720px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 `
 
 const StyledBgImage = styled(HeaderBgImage)`
@@ -34,6 +39,8 @@ const StyledLogo = styled(Logo)`
 const StyledHeaderImage = styled.div`
   grid-column: 8 / span 4;
   grid-row: 3 / span 3;
+
+
 `
 const StyledTitle = styled.div`
   grid-column: 2 / span 6;
@@ -41,6 +48,7 @@ const StyledTitle = styled.div`
   text-transform: uppercase;
   letter-spacing: 1.45px;
   text-shadow: 0px 1px 2px black;
+  
 `
 
 const ImageWrapper = styled.div`
@@ -66,7 +74,7 @@ export default () => {
 
   return (
     <>
-      <Header>
+      <Header sx={{pt: [8,8,0,0]}}>
         <Line
           css={css`
             height: 1000px;

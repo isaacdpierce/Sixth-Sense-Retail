@@ -30,8 +30,11 @@ const Main = styled.main`
   align-items: center;
   animation: ${delay} 3s ease;
   z-index: 2;
+  @media (max-width: 720px) {
+         grid-column: 1 / -1;
+      }
 `
 
 export default ({ children }) => (
-  <Main sx={{ px: 8, py: 6, mb: 7 }}>{children}</Main>
+  <Main sx={{ px: [6,6,6,8], py: [4,4,6,6], mb: 7 }}>{children}</Main>
 )
