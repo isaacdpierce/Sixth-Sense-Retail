@@ -18,7 +18,7 @@ const Image = () => {
   return (
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
-      alt="People creating networks"
+      alt='Opens new page with more info. People creating connections.'
     />
   )
 }

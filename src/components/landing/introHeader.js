@@ -42,16 +42,16 @@ export default () => {
   const { headline } = useSiteMetadata()
   return (
     <IntroHeader>
-      <div style={{ width: "600px" }}>
+      <div style={{ width: "600px"}}>
         <Frame>
-          <Link to="/connect">
+          <Link to="/connect" title="Opens new page with more information.">
             <ImageWrapper>
               <IntroHeadImage />
             </ImageWrapper>
           </Link>
         </Frame>
       </div>
-      <Headline sx={{ mb: 0, mt: 7, fontWeight: "body", fontSize: 6 }}>
+      <Headline sx={{ mb: 0, mt: 7, ml: 6, fontWeight: "body", fontSize: 6 }}>
         {headline}
       </Headline>
     </IntroHeader>

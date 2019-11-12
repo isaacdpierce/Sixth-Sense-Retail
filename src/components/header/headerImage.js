@@ -15,5 +15,5 @@ export default () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt='Opens new page with more info. Sunset on shopping street.' />
 }

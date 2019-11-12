@@ -91,9 +91,9 @@ export default () => {
         </StyledTitle>
         <StyledHeaderImage>
           <Frame>
-            <Link to="/inspire">
+            <Link to="/inspire" title="Opens new page with more information.">
               <ImageWrapper>
-                <HeaderImage />
+                <HeaderImage  />
               </ImageWrapper>
             </Link>
           </Frame>

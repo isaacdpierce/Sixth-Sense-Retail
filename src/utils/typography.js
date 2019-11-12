@@ -19,21 +19,6 @@ const theme = {
   title: "IP Theme",
   baseFontSize: "16px",
   baseLineHeight: 1.5625,
-
-  googleFonts: [
-    {
-      name: "Source Serif Pro",
-      styles: ["400", "600"],
-    },
-    {
-      name: "Source Sans Pro",
-      styles: ["400", "400i", "700"],
-    },
-    {
-      name: "Cormorant Garamond",
-      styles: ["100", "300", "400", "600"],
-    },
-  ],
   headerFontFamily: ["Cormorant Garamond", "sans-serif"],
   bodyFontFamily: ["Source Sans Pro", "sans-serif"],
   headerColor: "#fff",

@@ -6,6 +6,7 @@ const OuterFrame = styled.div`
   border-top: 1px solid #1e1e1e;
   border-radius: 3px;
   box-shadow: 0px 10px 10px 10px hsl(0, 0%, 0%, 0.6);
+   min-width: 360px;
 `
 
 const InnerFrame = styled.div`
@@ -20,6 +21,7 @@ const Inset = styled.div`
   border-right: 5px solid #0e0e0e;
   border-bottom: 5px solid #1e1e1e;
   overflow: hidden;
+ 
 `
 
 export default ({ children }) => {

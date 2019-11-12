@@ -15,7 +15,7 @@ const Wrapper = styled.section`
   position: relative;
   overflow: hidden;
 `
-const MainGrid = styled.section`
+const MainGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: 8vh 100vh 1fr;
